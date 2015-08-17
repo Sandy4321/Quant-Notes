@@ -143,3 +143,24 @@ $$\Rightarrow p \leq \sum_{k=0}^T \frac{c_k}{(1+r)^k} $$
 
 In the cases where lending and borrowing rates are different, we get a spread of possible portfolio prices
 $$ \sum_{k=0}^T \frac{c_k}{(1+r_B)^k}  \leq p \leq \sum_{k=0}^T \frac{c_k}{(1+r_L)^k} $$
+
+###Annuities
+
+An annuity is a fixed payment of c over T years. The present value such an annuity can be determined with the use of the no arbritrage condition. 
+
+- Under no arbritrage, a cash payment of $c$, $t=k$ periods from now, is worth $\frac{c}{(1+r)^k}$ today.
+- Thus, an annual payment of c over T years will be worth $$ A = \sum_{k=0}^T \frac{c}{(1+r)^k} $$
+
+###Perpetuities
+
+A perpetuity is an annual cash payment of c starting for year $t = 0$
+
+The value of a perpetuity starting at $t = k$ will be $$ P = \sum_{t=0}^{\infty} \frac{c}{(1+r)^t}$$ which can be summed as a geometric progression and evaluates to
+$$P = c\Big( 1+\frac{1}{1+r} + \frac{1}{(1+r)^2} +... \infty  \Big) = \frac{c}{r}$$
+
+Thus, we can also write an annuity upto $t = n$ as 
+
+$$A(t=n) = P(1) - P(n+1) $$
+
+$$ \Rightarrow A(t=n) = \frac{c}{r} - \frac{c}{r} \Big\{ \frac{1}{(r+1)^{n}}  \Big\} = \frac{c}{r} \Big\{1- \frac{1}{(r+1)^{n}}  \Big\}$$
+
