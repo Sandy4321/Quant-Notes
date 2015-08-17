@@ -142,4 +142,4 @@ $$\Rightarrow p \leq \sum_{k=0}^T \frac{c_k}{(1+r)^k} $$
 **Together the two bounds give us the price,** $$p = \sum_{k=0}^T \frac{c_k}{(1+r)^k}$$
 
 In the cases where lending and borrowing rates are different, we get a spread of possible portfolio prices
-$$  $$
+$$ \sum_{k=0}^T \frac{c_k}{(1+r_B)^k}  \leq p \leq \sum_{k=0}^T \frac{c_k}{(1+r_L)^k} $$
