@@ -32,4 +32,29 @@ This way, shorting a stock
 - results in a profit if price drops
 - results in a loss if price rises
 
-However, while the potential profit with shorting is bounded (max is price drops to 0), the potential loss can be very large and is unbounded.
+However, while the potential profit with shorting is bounded (max is price drops to 0), the potential loss can be very large and is unbounded.
+
+###Setting the Forward contract price
+
+For simplification, lets assume the asset has to intermediate cash flows, like dividends or storage costs.
+
+Portfolio:
+
+- Buy forward contract
+- Short sell the underlying security
+- Lend $S_0$ upto time `T`Cash Flow | t = 0 | t = T |
+ :--------:  | :-----: | :----:|
+ Buy Forward Contract|$f_0 = 0$|$f_T = S_T - F$|
+Short sell and cover at time T |  $S_0$  |  $-S_T$ | 
+Lend upto time T |  $-S_0$  |  $\frac{S_0}{d(0,T)}$ |
+Net Cashflow |  $0$  |  $\frac{S_0}{d(0,T)} - F$ |
+
+where $d(0,T)$ is the cumulative interest accrued upto time T, given that it changes yearly.
+
+$$d(0,1) = \frac{1}{(1+r_{eff})^T} = \frac{1}{1+r_0}\frac{1}{1+r_1}...\frac{1}{1+r_{T-1}}$$
+
+- For there to be no arbritage deterministically, if the price at $t=0$ is $0$, then net deterministic cash flow at $t = T$ should also be $0$ 
+
+- So that any profit/loss that does occur at later times is undetermined at present time and not due to mispricing of the contract.
+
+Hence, $$F = \frac{S_0}{d(0,T)} > S_0$$
