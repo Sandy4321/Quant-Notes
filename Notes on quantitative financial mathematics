@@ -1,0 +1,9 @@
+# Notes on quantitative financial mathematics
+
+Personnals notes on quantitative financial mathematics based on divers books.
+
+## Convert notes to pdf
+
+You need [Pandoc](http://pandoc.org) on your system.
+To convert all markdown notes to pdf, simply use the script `./convert.sh`.
+
